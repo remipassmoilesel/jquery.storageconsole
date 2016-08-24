@@ -1,3 +1,7 @@
+/**
+ * Small utility used to display navigator storage
+ *
+ */
 ;(function($) {
   $.fn.extend({
     storageConsole : function(options) {
@@ -7,6 +11,8 @@
 
       return this.each(function() {
         var $this = $(this);
+
+        $this.empty();
 
         /**
          * Add a title
@@ -82,7 +88,7 @@
           logSpace.append("<h3>Session storage</h3>");
 
           if (sessionStorage.length < 1) {
-            logSpace.append('Space is empty');
+            logSpace.append('Storage is empty');
           }
 
           else {
@@ -96,7 +102,7 @@
           // show local storage
           logSpace.append("<h3>Local storage</h3>");
           if (localStorage.length < 1) {
-            logSpace.append("Espace vide");
+            logSpace.append('Storage is empty');
           }
 
           else {
